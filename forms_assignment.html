@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Assignment</title>
+</head>
+<body>
+    
+    <Main id="Main content" role="main"></Main>
+    <h1>Course Registration</h1>
+
+    <form action="/submit" method="Submit" novalidate>
+        <fieldset>
+            <legend>Personal Info</legend>
+            <div class="form group">
+                <input type="Full Name"
+                id="Full Name"
+                name="Full Name"
+                required
+                pattern="[A-Za-z]{2-50}"
+                aria-describedby="name-help">
+                <small id="Full Name">Enter your first and last name(2-50 characters)</small>
+            </div>
+
+        </fieldset>
+
+    </form>
+</body>
+</html>
