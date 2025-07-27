@@ -7,7 +7,7 @@
   </head>
   <body>
     <main>
-      <article>
+      <!-- <article>
         <form action="/submit" method="post">
           <fieldset>
             <legend>Personal Info</legend>
@@ -69,6 +69,173 @@
               />
             </div>
           </fieldset>
+        </form>
+      </article> -->
+      
+      <article>
+        <form action="/submit" method="post">
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                pattern="[A-Za-z ]{2,50}"
+                aria-describedby="name-help"
+              />
+              <small id="name-help"
+                >Enter your first and last name (2-50 characters)</small
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                aria-describedby="email-help"
+              />
+              <small id="email-help"
+                >We'll never share your email address</small
+              >
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Contact & Preferences</legend>
+
+            <div class="form-group">
+              <label for="birthdate">Date of Birth</label>
+              <input
+                type="date"
+                id="birthdate"
+                name="birthdate"
+                min="1900-01-01"
+                max="2025-05-01"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="123-456-7890"
+                aria-describedby="phone-help"
+              />
+              <small id="phone-help">Format: 123-456-7890</small>
+            </div>
+
+            <div class="form-group">
+              <label for="website">Personal Website</label>
+              <input
+                type="url"
+                id="website"
+                name="website"
+                placeholder="https://example.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="experience">Years of Experience</label>
+              <input
+                type="number"
+                id="experience"
+                name="experience"
+                min="0"
+                max="50"
+                step="1"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferences</legend>
+
+            <div class="form-group">
+              <label for="interests">Areas of Interest</label>
+              <select name="interests" id="interests">
+                <optgroup label="Development">
+                  <option value="frontend">Frontend Development</option>
+                  <option value="backend">Backend Development</option>
+                  <option value="fullstack">Full Stack Development</option>
+                </optgroup>
+                <optgroup label="Design">
+                  <option value="ui">UI Design</option>
+                  <option value="ux">UX Design</option>
+                  <option value="graphic">Graphic Design</option>
+                </optgroup>
+              </select>
+            </div>
+            <fieldset>
+              <legend>Experience Level</legend>
+
+              <div class="radio-group">
+                <input
+                  type="radio"
+                  id="beginner"
+                  name="level"
+                  value="beginner"
+                />
+                <label for="beginner">Beginner (0-1 years)</label>
+              </div>
+
+              <div class="radio-group">
+                <input
+                  type="radio"
+                  id="intermediate"
+                  name="level"
+                  value="intermediate"
+                />
+                <label for="intermediate">Intermediate (2-5 years)</label>
+              </div>
+
+              <div class="radio-group">
+                <input
+                  type="radio"
+                  id="advanced"
+                  name="level"
+                  value="advanced"
+                />
+                <label for="advanced">Advanced (5+ years)</label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Communication Preferences</legend>
+
+              <div class="checkbox-group">
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  name="communications"
+                  value="newsletter"
+                />
+                <label for="newsletter">Weekly newsletter</label>
+              </div>
+
+              <div class="checkbox-group">
+                <input
+                  type="checkbox"
+                  id="updates"
+                  name="communications"
+                  value="updates"
+                />
+                <label for="updates">Product Updates</label>
+              </div>
+            </fieldset>
+          </fieldset>
+
+          <button type="submit">Submit here</button>
         </form>
       </article>
     </main>
